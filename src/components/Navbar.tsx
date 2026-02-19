@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 const navLinks = [
   { to: "/", label: "Home" },
+  { to: "/mechanical-installation", label: "Mechanical & Industrial Installation" },
+  { to: "/civil-infrastructure", label: "Civil & Infrastructure" },
+  { to: "/structural-steel", label: "Structural & Steel Infrastructure" },
+  { to: "/projects", label: "Projects" },
   { to: "/about", label: "About Us" },
-  { to: "/services", label: "Services" },
-  { to: "/industries", label: "Industries" },
-  { to: "/quality-safety", label: "Quality & Safety" },
-  { to: "/careers", label: "Careers" },
   { to: "/contact", label: "Contact" },
 ];
 
@@ -29,41 +29,47 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-card/95 backdrop-blur-md shadow-sm border-b border-border"
+          ? "bg-card/95 backdrop-blur-md shadow-md border-b border-border"
           : "bg-transparent"
       }`}
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-primary rounded-sm flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm">CI</span>
+        <Link to="/" className="flex items-center gap-2.5">
+          <div className="w-9 h-9 bg-accent rounded flex items-center justify-center">
+            <span className="text-accent-foreground font-black text-sm">CI</span>
           </div>
-          <span className={`font-bold text-lg tracking-wide ${scrolled ? "text-foreground" : "text-primary-foreground md:text-primary-foreground"}`}>
+          <span className={`font-bold text-lg tracking-wide ${scrolled ? "text-foreground" : "text-primary-foreground"}`}>
             Concerted Industries
           </span>
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden xl:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.to}
               to={link.to}
-              className={`text-sm font-medium transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 ${
+              className={`text-[13px] font-semibold transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:bg-accent after:transition-all after:duration-300 ${
                 location.pathname === link.to
                   ? "after:w-full"
                   : "after:w-0 hover:after:w-full"
-              } ${scrolled ? "text-foreground hover:text-primary" : "text-primary-foreground/90 hover:text-primary-foreground"}`}
+              } ${scrolled ? "text-foreground hover:text-accent" : "text-primary-foreground/90 hover:text-primary-foreground"}`}
             >
               {link.label}
             </Link>
           ))}
+          <Link
+            to="/contact"
+            className="ml-2 bg-accent text-accent-foreground px-5 py-2.5 rounded font-bold text-sm transition-all duration-300 hover:bg-industrial-orange-hover"
+          >
+            Get a Quote
+          </Link>
         </div>
 
         {/* Mobile toggle */}
         <button
           onClick={() => setOpen(!open)}
-          className={`lg:hidden p-2 ${scrolled ? "text-foreground" : "text-primary-foreground"}`}
+          className={`xl:hidden p-2 ${scrolled ? "text-foreground" : "text-primary-foreground"}`}
           aria-label="Toggle menu"
         >
           {open ? <X size={24} /> : <Menu size={24} />}
@@ -72,7 +78,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="lg:hidden bg-card border-t border-border shadow-lg">
+        <div className="xl:hidden bg-card border-t border-border shadow-lg">
           <div className="container py-4 flex flex-col gap-1">
             {navLinks.map((link) => (
               <Link
@@ -87,6 +93,12 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <Link
+              to="/contact"
+              className="mt-2 bg-accent text-accent-foreground py-3 px-4 rounded text-sm font-bold text-center"
+            >
+              Get a Quote
+            </Link>
           </div>
         </div>
       )}

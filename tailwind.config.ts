@@ -14,7 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['"Source Sans 3"', 'system-ui', 'sans-serif'],
+        sans: ['Inter', '"Source Sans 3"', 'system-ui', 'sans-serif'],
+        display: ['Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -50,15 +51,17 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        steel: {
-          DEFAULT: "hsl(var(--steel))",
-          light: "hsl(var(--steel-light))",
+        navy: {
+          DEFAULT: "hsl(var(--navy))",
+          light: "hsl(var(--navy-light))",
         },
-        teal: {
-          accent: "hsl(var(--teal-accent))",
-        },
+        "steel-gray": "hsl(var(--steel-gray))",
         charcoal: "hsl(var(--charcoal))",
-        "body-grey": "hsl(var(--body-grey))",
+        concrete: "hsl(var(--concrete))",
+        "industrial-orange": {
+          DEFAULT: "hsl(var(--industrial-orange))",
+          hover: "hsl(var(--industrial-orange-hover))",
+        },
         surface: {
           DEFAULT: "hsl(var(--surface))",
           alt: "hsl(var(--surface-alt))",
