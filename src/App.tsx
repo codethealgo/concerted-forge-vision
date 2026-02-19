@@ -6,11 +6,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Index from "./pages/Index";
+import MechanicalInstallation from "./pages/MechanicalInstallation";
+import CivilInfrastructure from "./pages/CivilInfrastructure";
+import StructuralSteel from "./pages/StructuralSteel";
+import Projects from "./pages/Projects";
 import About from "./pages/About";
-import Services from "./pages/Services";
-import Industries from "./pages/Industries";
-import QualitySafety from "./pages/QualitySafety";
-import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -25,11 +25,11 @@ const App = () => (
         <Navbar />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/mechanical-installation" element={<MechanicalInstallation />} />
+          <Route path="/civil-infrastructure" element={<CivilInfrastructure />} />
+          <Route path="/structural-steel" element={<StructuralSteel />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/industries" element={<Industries />} />
-          <Route path="/quality-safety" element={<QualitySafety />} />
-          <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
