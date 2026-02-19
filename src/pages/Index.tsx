@@ -76,7 +76,7 @@ export default function Home() {
           <div className="max-w-3xl hero-stagger">
             <div className="w-14 h-1 bg-accent mb-6 opacity-0 animate-fade-up" />
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-primary-foreground leading-[1.08] opacity-0 animate-fade-up">
-              Mechanical &amp; Industrial Installation Experts
+              Civil &amp; Mechanical Fabrication Experts
             </h1>
             <p className="mt-6 text-lg md:text-xl text-primary-foreground/60 max-w-2xl leading-relaxed opacity-0 animate-fade-up">
               Delivering Fabrication, Erection, Piping, Surface Protection, and Infrastructure Solutions Across Industries
@@ -101,14 +101,14 @@ export default function Home() {
       </section>
 
       {/* ── STATS ── */}
-      <section className="bg-primary py-16">
+      {/* <section className="bg-primary py-16">
         <div className="container grid grid-cols-2 md:grid-cols-4 gap-8">
           <StatItem target={35} suffix="+" label="Years Experience" />
           <StatItem target={500} suffix="+" label="Skilled Workforce" />
           <StatItem target={200} suffix="+" label="Projects Delivered" />
           <StatItem target={100} suffix="%" label="Safety Driven" />
         </div>
-      </section>
+      </section> */}
 
       {/* ── MECHANICAL & INDUSTRIAL INSTALLATION ── */}
       <section className="py-20 md:py-28">
