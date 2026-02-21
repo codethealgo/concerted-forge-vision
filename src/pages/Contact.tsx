@@ -30,7 +30,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-semibold mb-1">Address</h4>
-                      <p className="text-muted-foreground text-sm">SIIDCUL Industrial Estate,<br />2MQP+53C, Sitarganj, Lalarpatti,<br />Uttarakhand – 263151</p>
+                      <p className="text-muted-foreground text-sm">604, 6th Floor, Tower-A,,<br />Technova, Sector 132, Maharishi Nagar,<br />Noida Gautam Buddha Nagar <br/> 201304, Uttar Pradesh</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
