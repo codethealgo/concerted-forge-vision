@@ -30,7 +30,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-semibold mb-1">Address</h4>
-                      <p className="text-muted-foreground text-sm">Industrial Area, Engineering District<br />City, Country</p>
+                      <p className="text-muted-foreground text-sm">SIIDCUL Industrial Estate,<br />2MQP+53C, Sitarganj, Lalarpatti,<br />Uttarakhand – 263151</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -39,7 +39,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-semibold mb-1">Phone</h4>
-                      <p className="text-muted-foreground text-sm">+1 (555) 123-4567</p>
+                      <p className="text-muted-foreground text-sm">+91-9876543210</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -48,7 +48,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-semibold mb-1">Email</h4>
-                      <p className="text-muted-foreground text-sm">info@concertedindustries.com</p>
+                      <p className="text-muted-foreground text-sm">info@ciplinfra.com</p>
                     </div>
                   </div>
                 </div>
