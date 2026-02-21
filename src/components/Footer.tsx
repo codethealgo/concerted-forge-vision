@@ -72,7 +72,7 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-start gap-3 text-sm text-primary-foreground/60">
                 <MapPin size={16} className="mt-0.5 shrink-0 text-accent" />
-                <span>SIIDCUL Industrial Estate, 2MQP+53C, Sitarganj, Lalarpatti, Uttarakhand – 263151</span>
+                <span>604, 6th Floor, Tower-A, Logix Technova, Sector 132, Maharishi Nagar, Noida Gautam Buddha Nagar - 201304, Uttar Pradesh</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-primary-foreground/60">
                 <Phone size={16} className="shrink-0 text-accent" />
