@@ -5,6 +5,7 @@ import {
   Building2, Pipette, Factory, PaintBucket, Route,
   Landmark, Warehouse, Dam, HardHat,
   ArrowRight, Shield, Clock, Users, CheckCircle, Wrench,
+  Sun, Layers, ClipboardCheck,
 } from "lucide-react";
 import heroImg from "@/assets/hero-industrial.jpg";
 
@@ -186,8 +187,136 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── WHY CONCERTED INDUSTRIES ── */}
+      {/* ── SOLAR MOUNTING ── */}
       <section className="py-20 md:py-28">
+        <div className="container">
+          <SectionReveal>
+            <div className="mb-14">
+              <div className="w-12 h-1 bg-accent mb-4" />
+              <p className="text-sm uppercase tracking-[0.25em] text-muted-foreground font-semibold mb-2">Solar Solutions</p>
+              <h2 className="text-3xl md:text-4xl font-black">Optimizing Solar Mounting Designs</h2>
+            </div>
+          </SectionReveal>
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+            {[
+              { icon: Sun, title: "Tilt Angle & Orientation", bullets: ["Optimized panel positioning for maximum energy yield", "Site-specific tilt calculations"] },
+              { icon: Layers, title: "Material Selection", bullets: ["High-grade aluminium & galvanized steel", "Corrosion-resistant mounting hardware"] },
+              { icon: Shield, title: "Wind & Load Resistance", bullets: ["Engineered for extreme weather conditions", "Structural load compliance"] },
+              { icon: Landmark, title: "Rooftop & Ground Mounting", bullets: ["Flat roof and pitched roof solutions", "Open-field ground mount systems"] },
+              { icon: Route, title: "Tracking Systems", bullets: ["Single-axis and dual-axis solar trackers", "Increased energy generation up to 25%"] },
+              { icon: Wrench, title: "Innovative Mounting Products", bullets: ["Floating solar mounts", "Tool-free modular designs"] },
+            ].map((s) => (
+              <SectionReveal key={s.title}>
+                <div className="bg-card border border-border rounded-lg p-7 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group h-full">
+                  <div className="w-12 h-12 rounded bg-accent/10 flex items-center justify-center mb-5">
+                    <s.icon size={24} className="text-muted-foreground group-hover:text-accent transition-colors duration-300" />
+                  </div>
+                  <h3 className="font-bold text-lg mb-3 leading-snug">{s.title}</h3>
+                  <ul className="space-y-1.5">
+                    {s.bullets.map((b) => (
+                      <li key={b} className="text-sm text-muted-foreground flex items-start gap-2">
+                        <CheckCircle size={14} className="mt-0.5 text-accent shrink-0" />
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </SectionReveal>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link to="/solar-mounting" className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-3 rounded font-bold text-sm transition-all duration-300 hover:bg-industrial-orange-hover hover:gap-3 group">
+              Explore Solar Mounting
+              <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── ALUMINIUM FRAMES ── */}
+      <section className="py-20 md:py-28 bg-secondary">
+        <div className="container">
+          <SectionReveal>
+            <div className="mb-14">
+              <div className="w-12 h-1 bg-accent mb-4" />
+              <p className="text-sm uppercase tracking-[0.25em] text-muted-foreground font-semibold mb-2">Advanced Materials</p>
+              <h2 className="text-3xl md:text-4xl font-black">Advancements in Aluminium Module Frames</h2>
+            </div>
+          </SectionReveal>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { icon: Layers, title: "Stronger Yet Slimmer" },
+              { icon: Shield, title: "Next-Gen Protective Coatings" },
+              { icon: Factory, title: "Precision Manufacturing" },
+              { icon: CheckCircle, title: "Recycling & Circular Economy" },
+            ].map((s) => (
+              <SectionReveal key={s.title}>
+                <div className="bg-card border border-border rounded-lg p-7 text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+                  <div className="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                    <s.icon size={28} className="text-muted-foreground group-hover:text-accent group-hover:scale-110 transition-all duration-300" />
+                  </div>
+                  <h3 className="font-bold">{s.title}</h3>
+                </div>
+              </SectionReveal>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link to="/aluminium-frames" className="inline-flex items-center gap-2 border-2 border-primary text-primary px-8 py-3 rounded font-bold text-sm transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:gap-3 group">
+              Explore Aluminium Frames
+              <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── EPC BEST PRACTICES ── */}
+      <section className="py-20 md:py-28">
+        <div className="container">
+          <SectionReveal>
+            <div className="mb-14">
+              <div className="w-12 h-1 bg-accent mb-4" />
+              <p className="text-sm uppercase tracking-[0.25em] text-muted-foreground font-semibold mb-2">Industry Standards</p>
+              <h2 className="text-3xl md:text-4xl font-black">Best Practices in EPC Solar Projects</h2>
+            </div>
+          </SectionReveal>
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+            {[
+              { icon: ClipboardCheck, title: "Project Planning & Feasibility", bullets: ["Site surveys & yield analysis", "Compliance evaluation"] },
+              { icon: Building2, title: "Engineering Excellence", bullets: ["Tilt optimization & structural safety", "IEC & IEEE compliance"] },
+              { icon: Factory, title: "Procurement Strategy", bullets: ["Tier-1 component sourcing", "QA protocols & vendor coordination"] },
+              { icon: HardHat, title: "Construction & Execution", bullets: ["Skilled workforce deployment", "Safety compliance & precision installation"] },
+              { icon: CheckCircle, title: "Testing & Commissioning", bullets: ["Electrical testing & performance validation", "Grid synchronization"] },
+              { icon: Wrench, title: "O&M Integration", bullets: ["SCADA monitoring systems", "Preventive maintenance planning"] },
+            ].map((s) => (
+              <SectionReveal key={s.title}>
+                <div className="bg-card border border-border rounded-lg p-7 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group h-full">
+                  <div className="w-12 h-12 rounded bg-accent/10 flex items-center justify-center mb-5">
+                    <s.icon size={24} className="text-muted-foreground group-hover:text-accent transition-colors duration-300" />
+                  </div>
+                  <h3 className="font-bold text-lg mb-3 leading-snug">{s.title}</h3>
+                  <ul className="space-y-1.5">
+                    {s.bullets.map((b) => (
+                      <li key={b} className="text-sm text-muted-foreground flex items-start gap-2">
+                        <CheckCircle size={14} className="mt-0.5 text-accent shrink-0" />
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </SectionReveal>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link to="/epc-best-practices" className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-3 rounded font-bold text-sm transition-all duration-300 hover:bg-industrial-orange-hover hover:gap-3 group">
+              Explore EPC Best Practices
+              <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── WHY CONCERTED INDUSTRIES ── */}
+      <section className="py-20 md:py-28 bg-secondary">
         <div className="container">
           <SectionReveal>
             <div className="text-center mb-14">
