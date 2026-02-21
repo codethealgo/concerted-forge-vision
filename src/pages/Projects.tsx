@@ -2,6 +2,16 @@ import { Link } from "react-router-dom";
 import PageHero from "@/components/PageHero";
 import SectionReveal from "@/components/SectionReveal";
 import { ArrowRight } from "lucide-react";
+import pipelineImg from "@/assets/project-pipeline.jpg";
+import mechanicalImg from "@/assets/project-mechanical.jpg";
+import steelImg1 from "@/assets/structural-steel-1.jpg";
+import steelImg2 from "@/assets/structural-steel-2.jpg";
+const categoryImages: Record<string, string> = {
+  Mechanical: mechanicalImg,
+  Piping: pipelineImg,
+  Civil: steelImg2,
+  Steel: steelImg1,
+};
 
 const projects = [
   { title: "Thermal Power Plant – Structural Steel Erection", scope: "Fabrication and erection of 2,500 MT structural steel for boiler and turbine buildings.", category: "Mechanical" },
@@ -30,8 +40,8 @@ export default function Projects() {
             {projects.map((p) => (
               <SectionReveal key={p.title}>
                 <div className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 group h-full flex flex-col">
-                  <div className="h-48 bg-surface flex items-center justify-center relative overflow-hidden">
-                    <span className="text-6xl font-black text-muted-foreground/10">{p.category[0]}</span>
+                  <div className="h-48 relative overflow-hidden">
+                    <img src={categoryImages[p.category]} alt={p.title} className="w-full h-full object-cover" />
                     <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/80 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
                       <span className="text-primary-foreground font-bold text-sm">{p.category}</span>
                     </div>

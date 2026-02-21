@@ -9,6 +9,9 @@ const navLinks = [
   { to: "/structural-steel", label: "Structural & Steel Infrastructure" },
   { to: "/projects", label: "Projects" },
   { to: "/about", label: "About Us" },
+  { to: "/solar-mounting", label: "Solar Mounting" },
+  { to: "/aluminium-frames", label: "Aluminium Frames" },
+  { to: "/epc-best-practices", label: "EPC Best Practices" },
   { to: "/contact", label: "Contact" },
 ];
 
