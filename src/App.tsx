@@ -12,6 +12,9 @@ import StructuralSteel from "./pages/StructuralSteel";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import SolarMounting from "./pages/SolarMounting";
+import AluminiumFrames from "./pages/AluminiumFrames";
+import EPCBestPractices from "./pages/EPCBestPractices";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +33,9 @@ const App = () => (
           <Route path="/structural-steel" element={<StructuralSteel />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
+          <Route path="/solar-mounting" element={<SolarMounting />} />
+          <Route path="/aluminium-frames" element={<AluminiumFrames />} />
+          <Route path="/epc-best-practices" element={<EPCBestPractices />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

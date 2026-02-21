@@ -10,6 +10,9 @@ const serviceLinks = [
 const quickLinks = [
   { to: "/projects", label: "Projects" },
   { to: "/about", label: "About Us" },
+  { to: "/solar-mounting", label: "Solar Mounting" },
+  { to: "/aluminium-frames", label: "Aluminium Frames" },
+  { to: "/epc-best-practices", label: "EPC Best Practices" },
   { to: "/contact", label: "Contact" },
 ];
 
@@ -69,15 +72,15 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-start gap-3 text-sm text-primary-foreground/60">
                 <MapPin size={16} className="mt-0.5 shrink-0 text-accent" />
-                <span>Industrial Area, Engineering District, City, Country</span>
+                <span>SIIDCUL Industrial Estate, 2MQP+53C, Sitarganj, Lalarpatti, Uttarakhand – 263151</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-primary-foreground/60">
                 <Phone size={16} className="shrink-0 text-accent" />
-                <span>+1 (555) 123-4567</span>
+                <span>+91-9876543210</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-primary-foreground/60">
                 <Mail size={16} className="shrink-0 text-accent" />
-                <span>info@concertedindustries.com</span>
+                <span>info@ciplinfra.com</span>
               </div>
             </div>
           </div>

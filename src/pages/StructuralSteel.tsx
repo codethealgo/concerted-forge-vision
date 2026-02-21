@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import PageHero from "@/components/PageHero";
 import SectionReveal from "@/components/SectionReveal";
 import { Building2, Warehouse, Construction, Wrench, CheckCircle, ArrowRight } from "lucide-react";
-
+import steelImg1 from "@/assets/structural-steel-1.jpg";
+import steelImg2 from "@/assets/structural-steel-2.jpg";
 const services = [
   {
     icon: Warehouse,
@@ -64,8 +65,8 @@ export default function StructuralSteel() {
             {services.map((s, i) => (
               <SectionReveal key={s.title}>
                 <div className={`grid md:grid-cols-[1fr_1.2fr] gap-8 items-start ${i % 2 === 1 ? "md:direction-rtl" : ""}`}>
-                  <div className={`bg-surface rounded-lg h-64 md:h-80 flex items-center justify-center ${i % 2 === 1 ? "md:order-2" : ""}`}>
-                    <s.icon size={72} className="text-muted-foreground/20" />
+                  <div className={`rounded-lg h-64 md:h-80 overflow-hidden ${i % 2 === 1 ? "md:order-2" : ""}`}>
+                    <img src={i % 2 === 0 ? steelImg1 : steelImg2} alt={s.title} className="w-full h-full object-cover" />
                   </div>
                   <div className={`${i % 2 === 1 ? "md:order-1" : ""}`}>
                     <div className="w-10 h-1 bg-accent mb-4" />
