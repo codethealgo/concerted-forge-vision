@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -37,13 +38,8 @@ export default function Navbar() {
       }`}
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="flex items-center gap-2.5">
-          <div className="w-9 h-9 bg-accent rounded flex items-center justify-center">
-            <span className="text-accent-foreground font-black text-sm">CI</span>
-          </div>
-          <span className={`font-bold text-lg tracking-wide ${scrolled ? "text-foreground" : "text-primary-foreground"}`}>
-            Concerted Industries
-          </span>
+        <Link to="/" className="flex items-center gap-2">
+          <img src={logo} alt="Concerted Industries" className="h-10 md:h-12 w-auto" />
         </Link>
 
         {/* Desktop nav */}
