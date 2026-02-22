@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
+import logoImg from "@/assets/logo.png";
 
 const serviceLinks = [
   { to: "/mechanical-installation", label: "Mechanical & Industrial Installation" },
@@ -24,10 +25,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 bg-accent rounded flex items-center justify-center">
-                <span className="text-accent-foreground font-black text-xs">CI</span>
-              </div>
-              <span className="font-bold text-lg tracking-wide">Concerted Industries</span>
+              <img src={logoImg} alt="Concerted Industries" className="h-12 w-auto brightness-0 invert" />
             </div>
             <p className="text-primary-foreground/60 text-sm leading-relaxed">
               Delivering specialized mechanical fabrication, civil construction, and steel infrastructure solutions with precision, safety, and reliability.
